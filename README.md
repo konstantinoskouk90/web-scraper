@@ -7,7 +7,7 @@
 
 **How To Run**:
 
-1. (Mandatory) Make sure you have [yarn](https://www.npmjs.com/package/yarn) installed globally. This project uses the newest version of yarn `3.0.0-rc.6`.
+1. (Mandatory) Make sure you have [yarn](https://www.npmjs.com/package/yarn) installed globally. This project uses version `3.1.0-rc.8`.
 
 2. (Mandatory) This project has been setup as a monorepo. You will need to run `yarn install` from the root when you first clone to install all dependencies.
 
@@ -28,7 +28,7 @@
 **Tech Stack**:
 
 * Project: JS Monorepo which enables us to deploy each workspace separately, while sharing resources between workspaces e.g. shared directory which comes with types that we use in both our FE and BE.
-* Front End: React.js via Webpack, so that we avoid the boilerplate that comes with create-react-app, as this project is small in size. Also provides us with more flexibility. Also style-component to style our components, to encourage reusability of styles and avoid using class names which are global and come with significant risks.
+* Front End: React.js via Webpack, so that we avoid the boilerplate that comes with create-react-app, as this project is small in size. Additionally it provides us with more flexibility; also using styled-components to style our components, to encourage reusability of styles and avoid using class names which are global and come with significant risks.
 * Back End: Koa.js, lightweight Express.js alternative, which allows us to cherrypick what we want to install and is more of a library than a framework. Made sense to use for a project as such where our requirements wer minimal.
 
 **Things Left To Do**:
@@ -44,4 +44,4 @@
 
 Distributed System Design - How would this scale, when the data which is fetched and manipulated, grows significantly?
 
-What we can potentially do to address this in the future is distributed queues - scaling horizontally. Relevant article: [article](https://blog.logrocket.com/scale-node-js-app-using-distributed-queues/). This will not allow us to send an instant response the same way a load balancer would (scaling vertically), but it would help with not making users wait on each others requests, which for an application like this makes more sense to do.
+What we can potentially do to address this in the future is distributed queues - scaling horizontally. Relevant [article](https://blog.logrocket.com/scale-node-js-app-using-distributed-queues/). This will not allow us to send an instant response the same way a load balancer would (scaling vertically), but it would help with not making users wait on each others requests, which for an application like this makes more sense to do.
