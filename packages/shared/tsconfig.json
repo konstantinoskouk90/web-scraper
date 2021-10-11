@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDirs": ["./"],
+    "baseUrl": "src",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "removeComments": true,
+    "target": "es2019",
+    "strict": true,
+    "skipLibCheck": true,
+    "allowUnreachableCode": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "listEmittedFiles": true,
+    "typeRoots": [
+      "../../node_modules/@types",
+      "./node_modules/@types"
+    ]
+  }
+}

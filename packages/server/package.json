@@ -1,0 +1,54 @@
+{
+  "name": "@web-scraper/server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "lint-staged": {
+    "**/*.ts*": [
+      "yarn lint"
+    ]
+  },
+  "scripts": {
+    "build": "tsc -b .",
+    "build:clean": "rm -Rf build",
+    "lint": "eslint ./src --ext .ts",
+    "precommit": "lint-staged",
+    "prepush": "yarn build",
+    "reset": "rm -Rf node_modules",
+    "start": "nodemon src/index.ts",
+    "test": "env TS_NODE_PROJECT=\"tsconfig.testing.json\" nyc --reporter=text mocha --require ts-node/register 'src/**/*.test.ts' --exit"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/chai-http": "^4.2.0",
+    "@types/cheerio": "^0.22.30",
+    "@types/config": "^0.0.39",
+    "@types/ioredis": "^4.27.6",
+    "@types/joi": "^17.2.3",
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.3",
+    "@types/koa-helmet": "^6.0.4",
+    "@types/koa-joi-router": "^8.0.2",
+    "@types/koa-ratelimit": "^4.2.3",
+    "@types/koa__cors": "^3.0.3",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "axios": "^0.22.0",
+    "cheerio": "^1.0.0-rc.10",
+    "config": "^3.3.6",
+    "ioredis": "^4.27.10",
+    "koa": "^2.13.3",
+    "koa-bodyparser": "^4.3.0",
+    "koa-helmet": "^6.1.0",
+    "koa-joi-router": "^8.0.0",
+    "koa-ratelimit": "^5.0.1"
+  }
+}

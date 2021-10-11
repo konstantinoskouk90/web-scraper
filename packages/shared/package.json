@@ -1,0 +1,18 @@
+{
+  "name": "@web-scraper/shared",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "lint-staged": {
+    "**/*.ts*": [
+      "yarn lint"
+    ]
+  },
+  "scripts": {
+    "build": "tsc -b .",
+    "build:clean": "rm -Rf build",
+    "lint": "eslint ./src --ext .ts",
+    "precommit": "lint-staged",
+    "prepush": "yarn build"
+  }
+}
